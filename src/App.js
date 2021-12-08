@@ -31,9 +31,8 @@ class App extends React.Component {
           
         </Router>
 
-        {/* <SearchBar />
-        <VideosDisplay />
-        <Comments /> */}
+        
+        
         
       </div>
     );
