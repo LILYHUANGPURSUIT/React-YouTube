@@ -1,0 +1,27 @@
+nav{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    background-color:red;
+    margin: 20px;
+  
+  }
+   nav a{
+     color: white;
+     text-decoration: none;
+     padding: 20px 10px;
+     transition: .3s;
+     font-size: 30px;
+     font-family: Apple Chancery, cursive;
+    
+   }
+  
+   nav a:hover{
+     background-color: rosybrown;
+     cursor: pointer;
+   }
+
+   nav h1{
+       font-size: 30px;
+       padding:12;
+       font-family: cursive;
+   }
