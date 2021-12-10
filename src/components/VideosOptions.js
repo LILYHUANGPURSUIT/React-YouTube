@@ -1,5 +1,7 @@
 import React from "react";
-import Video from "./Video";
+import { Link } from "react-router-dom"
+import ViewPage from "./ViewPage";
+// import Video from "./Video";
 
 class VideosOptions extends React.Component{
 
@@ -7,16 +9,18 @@ class VideosOptions extends React.Component{
         let { searchResults } = this.props;
         let videoList = searchResults.map((video)=>{
             return (
-                <div className="videosOptions">
-                    <img src={video.snippet.thumbnails.default.url} />
-                    <p>{video.snippet.title}</p>
-                </div>
+                <Link to={`videos/${video.Id.videoId}`}>
+                    <div className="videosOptions">
+                        <img src={video.snippet.thumbnails.default.url} alt ="video image" />
+                        <p>{video.snippet.title}</p>
+                    </div>
+                </Link>
             )
         })
         return (
             <div>
                 {videoList}
-                {/* <Video videoList={this.videoList} /> */}
+                <ViewPage videoList={this.videoList} />
             </div>
         )
     }
