@@ -5,7 +5,6 @@ import SearchBar from "./components/SearchBar";
 import VideosOptions from "./components/VideosOptions";
 // import Comments from "./components/Comments";
 import AboutPage from "./components/AboutPage";
-import SearchBar from './components/SearchBar';
 import './App.css';
 
 
@@ -25,11 +24,11 @@ class App extends React.Component {
         .then((data) => {
             this.setState({
                 searchResults: data.items,
-                noSearch: ""
+                noSearch: "",
             })
         })
-        
     }
+
 
   render(){
     console.log(this.state.searchResults)
@@ -43,13 +42,13 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/">
                 <SearchBar handleSearch={this.handleSearch} noSearch={this.state.noSearch}/>
+                <VideosOptions searchResults={this.state.searchResults} />
               </Route>
               <Route path="/about">
-                <AboutPage />
+                <AboutPage/>
               </Route>
             </Switch>
 
-            <VideosOptions searchResults={this.state.searchResults} />
             {/* <Comments /> */}
           
         </Router>
