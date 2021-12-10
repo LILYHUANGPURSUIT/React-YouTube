@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBar from "./SearchBar";
+
 import VideosDisplay from "./VideosDisplay";
 import Comments from "./Comments";
 
@@ -17,24 +17,13 @@ class HomePage extends React.Component{
 
     
 
-    // componentDidMount(){
-        
-    //     fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${searchResult}&type=video&key=${process.env.REACT_APP_API_KEY}`)
-        
-    //     .then((res)=> res.json())
-    //     .then((data) => {
-    //         console.log(data)
-    //         this.setState({
-    //             videoInfo: data,
-    //         })
-    //     })
-    // }
+
 
     render(){
         return (
             <div>
                 
-                <SearchBar />
+                {/* <SearchBar /> */}
                 <VideosDisplay />
                 <Comments />
             </div>

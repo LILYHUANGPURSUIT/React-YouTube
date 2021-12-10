@@ -10,7 +10,7 @@ class Navbar extends React.Component {
             <div>
                 <nav>
                     <h1>YouTube</h1>
-                    <Link exact to ="/">Home</Link>
+                    <Link to ="/">Home</Link>
                     <Link to="/about">About</Link>
                 </nav>
             </div>
