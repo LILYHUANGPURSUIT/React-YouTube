@@ -1,12 +1,13 @@
 import React from "react";
+import Video from "./Video";
 
-class VideosDisplay extends React.Component{
+class VideosOptions extends React.Component{
 
     render(){
         let { searchResults } = this.props;
         let videoList = searchResults.map((video)=>{
             return (
-                <div>
+                <div className="videosOptions">
                     <img src={video.snippet.thumbnails.default.url} />
                     <p>{video.snippet.title}</p>
                 </div>
@@ -15,9 +16,10 @@ class VideosDisplay extends React.Component{
         return (
             <div>
                 {videoList}
+                {/* <Video videoList={this.videoList} /> */}
             </div>
         )
     }
 }
 
-export default VideosDisplay;
+export default VideosOptions;

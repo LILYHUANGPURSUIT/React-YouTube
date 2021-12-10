@@ -27,8 +27,7 @@ class Comments extends React.Component{
             e.preventDedault();
             this.setState({
                 commentsList: [...this.state.commentsList, {"name":this.state.userName, "comment":this.state.userComment}],
-                userName: "",
-                userComment: "",
+                
             })
         }
 
@@ -36,10 +35,10 @@ class Comments extends React.Component{
     render(){
         let nameNcomments = this.state.commentsList.map((obj)=>{
             return(
-                <ul>
+                <div>
                     <li>{obj.name}</li>
                     <li>{obj.comment}</li>
-                </ul>
+                </div>
             )
         })
         
@@ -55,11 +54,9 @@ class Comments extends React.Component{
 
                   <button type="submit" >Submit</button>
                 </form>
-
-                
-                   {nameNcomments}
-                
-
+                <ul>
+                    {nameNcomments}
+                </ul>
             </div>
         )
     }
