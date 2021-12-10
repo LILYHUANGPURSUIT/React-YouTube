@@ -5,6 +5,7 @@ import SearchBar from "./components/SearchBar";
 import VideosOptions from "./components/VideosOptions";
 // import Comments from "./components/Comments";
 import AboutPage from "./components/AboutPage";
+import SearchBar from './components/SearchBar';
 import './App.css';
 
 

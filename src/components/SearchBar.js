@@ -20,6 +20,7 @@ class SearchBar extends React.Component{
         
     }
 
+
     render(){
         let {handleSearch, noSearch} = this.props;
        
