@@ -2,8 +2,8 @@ import React from 'react';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import SearchBar from "./components/SearchBar";
-import VideosDisplay from "./components/VideosDisplay";
-import Comments from "./components/Comments";
+import VideosOptions from "./components/VideosOptions";
+// import Comments from "./components/Comments";
 import AboutPage from "./components/AboutPage";
 import SearchBar from './components/SearchBar';
 import './App.css';
@@ -14,9 +14,8 @@ class App extends React.Component {
     super();
     this.state={
       searchResults: [],
-      noSearch:""
+      noSearch: "No Search Results Yet! Please submit a search above!"
     }
-
   }
 
       handleSearch =(e, userInput)=>{
@@ -26,21 +25,10 @@ class App extends React.Component {
         .then((data) => {
             this.setState({
                 searchResults: data.items,
-                noSearch:""
+                noSearch: ""
             })
         })
         
-    }
-
- handleSearch=(userInput)=>{
-        fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${this.state.searchInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)  
-        .then((res)=> res.json())
-        .then((data) => {
-            console.log(data)
-            this.setState({
-                searchInput: userInput,
-            })
-        })
     }
 
   render(){
@@ -54,15 +42,15 @@ class App extends React.Component {
           
             <Switch>
               <Route exact path="/">
-                <SearchBar handleSearch={this.handleSearch}/>
+                <SearchBar handleSearch={this.handleSearch} noSearch={this.state.noSearch}/>
               </Route>
               <Route path="/about">
                 <AboutPage />
               </Route>
             </Switch>
 
-            <VideosDisplay searchResults={this.state.searchResults} />
-            <Comments />
+            <VideosOptions searchResults={this.state.searchResults} />
+            {/* <Comments /> */}
           
         </Router>
       </div>

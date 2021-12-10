@@ -22,22 +22,15 @@ class SearchBar extends React.Component{
 
 
     render(){
-        console.log(this.state.searchInput)
-        let {handleSearch} = this.props;
-        // let idList = searchResults.map((video)=>{
-        //     return (
-        //         <div>
-        //             <YouTube videoId={video.id.videoId} />
-        //         </div>
-        //     )
-        // })
+        let {handleSearch, noSearch} = this.props;
+       
         return (
             <div>
                 <form onSubmit={(e)=>handleSearch(e, this.state.searchInput)}>
                     <input type="text" placeholder="Search..." onChange={this.handleInput} value={this.state.searchInput}/>
                     <button type="submit" >Search</button>
-                    
                 </form>
+                <p id="no-search">{noSearch}</p>
                 {/* {idList} */}
             </div>
         )
