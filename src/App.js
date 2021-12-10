@@ -1,9 +1,9 @@
 import React from 'react';
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import SearchBar from "./components/SearchBar";
 import VideosOptions from "./components/VideosOptions";
-// import Comments from "./components/Comments";
+import ViewPage from "./components/ViewPage";
 import AboutPage from "./components/AboutPage";
 import './App.css';
 
@@ -24,7 +24,7 @@ class App extends React.Component {
         .then((data) => {
             this.setState({
                 searchResults: data.items,
-                noSearch: ""
+                noSearch: "",
             })
         })
         
@@ -34,24 +34,16 @@ class App extends React.Component {
     console.log(this.state.searchResults)
     return (
       <div className="App">
-        
-        <Router>
           <Navbar />
-          
-          
             <Switch>
               <Route exact path="/">
                 <SearchBar handleSearch={this.handleSearch} noSearch={this.state.noSearch}/>
+                <VideosOptions searchResults={this.state.searchResults} />
               </Route>
               <Route path="/about">
                 <AboutPage />
               </Route>
             </Switch>
-
-            <VideosOptions searchResults={this.state.searchResults} />
-            {/* <Comments /> */}
-          
-        </Router>
       </div>
     );
   }

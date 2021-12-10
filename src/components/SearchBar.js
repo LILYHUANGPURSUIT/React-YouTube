@@ -13,19 +13,25 @@ class SearchBar extends React.Component{
 //function handleSearch --> display videos.
 
     handleInput =(e)=>{
-        
         this.setState({
             searchInput: e.target.value,
         })
-        
     }
+
+    // handleResetInput = () =>{
+    //     if(this.state.searchInput.length>0){
+    //         this.setState({
+    //             searchInput: "",
+    //         })
+    //     }
+    // }
 
     render(){
         let {handleSearch, noSearch} = this.props;
        
         return (
             <div>
-                <form onSubmit={(e)=>handleSearch(e, this.state.searchInput)}>
+                <form onSubmit={(e)=>handleSearch(e, this.state.searchInput)} >
                     <input type="text" placeholder="Search..." onChange={this.handleInput} value={this.state.searchInput}/>
                     <button type="submit" >Search</button>
                 </form>
