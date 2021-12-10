@@ -27,8 +27,8 @@ class App extends React.Component {
                 noSearch: "",
             })
         })
-        
     }
+
 
   render(){
     console.log(this.state.searchResults)
@@ -41,9 +41,16 @@ class App extends React.Component {
                 <VideosOptions searchResults={this.state.searchResults} />
               </Route>
               <Route path="/about">
-                <AboutPage />
+                <AboutPage/>
               </Route>
             </Switch>
+<<<<<<< HEAD
+=======
+
+            {/* <Comments /> */}
+          
+        </Router>
+>>>>>>> 5a3b7fc349a5c987d305dcb7ea7a230122b1624a
       </div>
     );
   }

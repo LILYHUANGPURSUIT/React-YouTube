@@ -1,6 +1,6 @@
 import React from "react";
-import YouTube from "react-youtube";
-// import Comments from "./components/Comments";
+import {Link} from "react-router-dom"
+// import YouTube from "react-youtube";
 
 
 class ViewPage extends React.Component{
