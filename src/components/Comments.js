@@ -24,21 +24,24 @@ class Comments extends React.Component{
         }
 
         handleCommentSubmit =(e)=>{
-            e.preventDedault();
-            this.setState({
-                commentsList: [...this.state.commentsList, {"name":this.state.userName, "comment":this.state.userComment}],
-                
-            })
+            e.preventDefault();
+            if(this.state.userName && this.state.userComment){
+                this.setState({
+                    commentsList: [...this.state.commentsList, {"name":this.state.userName, "comment":this.state.userComment}],
+                    userName: "",
+                    userComment: "",
+                })
+            }
         }
 
 
     render(){
         let nameNcomments = this.state.commentsList.map((obj)=>{
             return(
-                <div>
-                    <li>{obj.name}</li>
-                    <li>{obj.comment}</li>
-                </div>
+                <li>
+                    <h3>{obj.name}</h3>
+                    <div>{obj.comment}</div>
+                </li>
             )
         })
         
