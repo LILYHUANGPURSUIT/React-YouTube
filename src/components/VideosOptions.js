@@ -1,8 +1,9 @@
 import React from "react";
-import {Link, Route} from "react-router-dom";
-import ViewPage from "./ViewPage";
+import {Link} from "react-router-dom";
 
 class VideosOptions extends React.Component{
+
+    
 
     render(){
         let { searchResults } = this.props;
@@ -10,7 +11,7 @@ class VideosOptions extends React.Component{
             return (
                 <Link to={`/videos/${video.id.videoId}`}>
                     <div className="videosOptions">
-                        <img src={video.snippet.thumbnails.default.url} />
+                        <img src={video.snippet.thumbnails.default.url} alt={video.snippet.description}/>
                         <p>{video.snippet.title}</p>
                     </div>
                 </Link>
@@ -19,9 +20,6 @@ class VideosOptions extends React.Component{
         return (
             <div>
                 {videoList}
-                <Route path="/videos/:id">
-                    <ViewPage />
-                </Route>
             </div>
         )
     }

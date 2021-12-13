@@ -1,16 +1,19 @@
 import React from "react";
-import {Link} from "react-router-dom"
-// import YouTube from "react-youtube";
+import {Link} from "react-router-dom";
+import YouTube from "react-youtube";
+import Comments from "./Comments"
 
 
 class ViewPage extends React.Component{
 
     render(){
-        // console.log(this.props.match.params.id)
+        const {id} = this.props.match.params;
+
         return (
             <div>
-                {/* <YouTube videoId={} /> */}
-                {/* <Comments /> */}
+                <YouTube videoId={id} />
+                
+                <Comments />
             </div>
         )
     }
