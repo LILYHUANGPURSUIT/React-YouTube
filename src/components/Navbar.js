@@ -9,7 +9,7 @@ class Navbar extends React.Component {
         return (
             <div>
                 <nav>
-                    <h1>YouTube</h1>
+                    <Link to = "/" onClick = {this.props.handleClear}>YouTube</Link>
                     <Link to ="/">Home</Link>
                     <Link to="/about">About</Link>
                 </nav>
