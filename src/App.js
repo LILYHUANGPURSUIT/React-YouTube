@@ -44,13 +44,8 @@ class App extends React.Component {
                 <AboutPage/>
               </Route>
             </Switch>
-<<<<<<< HEAD
-=======
 
             {/* <Comments /> */}
-          
-        </Router>
->>>>>>> 5a3b7fc349a5c987d305dcb7ea7a230122b1624a
       </div>
     );
   }

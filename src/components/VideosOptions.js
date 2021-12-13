@@ -10,7 +10,7 @@ class VideosOptions extends React.Component{
             return (
                 <Link to={`/videos/${video.id.videoId}`}>
                     <div className="videosOptions">
-                        <img src={video.snippet.thumbnails.default.url} />
+                        <img src={video.snippet.thumbnails.default.url} alt="video snippet"/>
                         <p>{video.snippet.title}</p>
                     </div>
                 </Link>
