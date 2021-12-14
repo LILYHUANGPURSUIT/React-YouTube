@@ -1,6 +1,7 @@
 import React from "react";
 import "./ViewPage.css"
 import {Link} from "react-router-dom";
+import './VideosOptions.css';
 
 class VideosOptions extends React.Component{
 
@@ -13,13 +14,13 @@ class VideosOptions extends React.Component{
                 <Link to={`/videos/${video.id.videoId}`}>
                     <div className="videosOptions">
                         <img src={video.snippet.thumbnails.default.url} alt={video.snippet.description}/>
-                        <p>{video.snippet.title}</p>
+                        <div id="vidTitle">{video.snippet.title}</div>
                     </div>
                 </Link>
             )
         })
         return (
-            <div>
+            <div id="videoPlays">
                 {videoList}
             </div>
         )

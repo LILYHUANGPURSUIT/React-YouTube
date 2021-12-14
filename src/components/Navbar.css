@@ -3,6 +3,7 @@ nav{
     grid-template-columns:repeat(3, 1fr);
     background-color:red;
     margin: 20px;
+    border-radius: 100px;
   
   }
    nav a{
@@ -11,17 +12,14 @@ nav{
      padding: 20px 10px;
      transition: .3s;
      font-size: 30px;
-     font-family: Apple Chancery, cursive;
+     font-family: Chalkduster, fantasy;
     
    }
   
    nav a:hover{
-     background-color: rosybrown;
+     background-color:rgba(68, 20, 20, 0.185);
      cursor: pointer;
+     border-radius: 100px;
    }
 
-   nav h1{
-       font-size: 30px;
-       padding:12;
-       font-family: cursive;
-   }
+   
