@@ -1,0 +1,37 @@
+#input-container {
+    font-size: xx-large;
+}
+
+.input{
+    padding: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.user-input {
+    height: 50px;
+    font-size: x-large;
+}
+
+#submit-Comments {
+    margin: 20px;
+    font-size: x-large;
+    border-width: 15px;
+    border-color: rgb(221, 195, 177);
+}
+
+#output-container {
+    list-style: none;
+    text-align: left;
+    margin: 50px 50px 150px;
+    padding: 80px;
+    border: 0.5rem outset pink;
+    outline: 0.5rem solid khaki;
+    border-radius: 12px;
+    font: 2rem sans-serif;
+    outline-offset: 0.5rem;
+}
+
+.each-output {
+    margin: 50px;
+    border-bottom: 10pt solid rgb(223, 183, 183);
+}

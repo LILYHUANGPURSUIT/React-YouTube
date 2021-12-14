@@ -1,4 +1,5 @@
 import React from "react";
+import "./ViewPage.css"
 import {Link} from "react-router-dom";
 
 class VideosOptions extends React.Component{

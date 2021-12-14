@@ -9,10 +9,13 @@ class ViewPage extends React.Component{
         const {id} = this.props.match.params;
 
         return (
-            <div>
-                <YouTube videoId={id} />
-                
-                <Comments />
+            <div id="videoAndComments">
+                <section id="video-display">
+                    <YouTube videoId={id} />
+                </section>
+                <section id="comments-section">
+                    <Comments />
+                </section>
             </div>
         )
     }

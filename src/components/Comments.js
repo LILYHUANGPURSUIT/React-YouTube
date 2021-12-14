@@ -1,4 +1,5 @@
 import React from "react";
+import "./Comments.css";
 
 class Comments extends React.Component{
     constructor(){
@@ -38,9 +39,10 @@ class Comments extends React.Component{
     render(){
         let nameNcomments = this.state.commentsList.map((obj)=>{
             return(
-                <li>
-                    <h3>{obj.name}</h3>
-                    <div>{obj.comment}</div>
+                <li className="each-output">
+                    <div>Name: {obj.name}</div>
+                    <br />
+                    <div>Comment: {obj.comment}</div>
                 </li>
             )
         })
@@ -48,16 +50,21 @@ class Comments extends React.Component{
         return (
             
             <div>
-                <form onSubmit={this.handleCommentSubmit}>
-                  <label htmlFor="name">Name:</label>
-                  <input type="text" id="name" value={this.state.userName} onInput={this.handleNameInput}/> 
+                <form onSubmit={this.handleCommentSubmit} id="input-container">
+                    <div className="input">
+                        <label htmlFor="name">Name: </label>
+                        <input className="user-input" type="text" id="name" value={this.state.userName} onInput={this.handleNameInput}/> 
+                    </div>
 
-                  <label htmlFor="comment">Comment:</label>
-                  <input type="text" id="comment" value={this.state.userComment} onInput={this.handleCommentInput}/> 
-
-                  <button type="submit" >Submit</button>
+                    <div className="input">
+                        <label htmlFor="comment">Comment:  </label>
+                        <input className="user-input" type="text" id="comment" value={this.state.userComment} onInput={this.handleCommentInput}/> 
+                    </div>
+                
+                    <button id="submit-Comments" type="submit" >Submit</button>
                 </form>
-                <ul>
+                <h3>Thank you for your comments!</h3>
+                <ul id="output-container">
                     {nameNcomments}
                 </ul>
             </div>

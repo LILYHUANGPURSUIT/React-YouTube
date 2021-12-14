@@ -1,0 +1,5 @@
+#videoAndComments {
+    display: grid;
+    margin: 50px;
+    gap: 110px;
+}
