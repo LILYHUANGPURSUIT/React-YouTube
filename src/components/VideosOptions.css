@@ -1,9 +1,18 @@
 #videoPlays{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    
+
+    
 }
 
 #vidTitle{
     font-family: Chalkduster, fantasy;
     /* text-decoration: none; */
+    /* margin:20px; */
+
+}
+
+.videosOptions{
+    margin:30px;
 }
