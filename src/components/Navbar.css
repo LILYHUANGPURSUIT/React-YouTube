@@ -17,8 +17,9 @@ nav{
    }
   
    nav a:hover{
-     background-color: rgb(134, 125, 125);
+     background-color:rgba(68, 20, 20, 0.185);
      cursor: pointer;
+     border-radius: 100px;
    }
 
    

@@ -6,7 +6,7 @@ class AboutPage extends React.Component{
     render(){
         return (
             <div>
-                <h1>React YouTube Project</h1>
+                <h1><strong>React YouTube Project</strong></h1>
                 <div id="projectDecription">A React application that lets you search for YouTube videos, then choose a video from a list to watch.</div>
                 <br />
                 <br />
